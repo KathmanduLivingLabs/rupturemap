@@ -1925,9 +1925,13 @@ function UI_MarkerGroups(pointsGroupsArray, map) {
 
             var popupContent = panelDocument.getDocument();
 
-            marker.bindPopup(popupContent, {
+            /*marker.bindPopup(popupContent, {
                 offset: L.point(0, -22)
-            });
+            });*/
+
+marker.on("click", function(e){
+new SplashScreen(MediaDocument("img/pic.jpg")).appendTo("body");
+});
 
             var highLightCircle;
 
