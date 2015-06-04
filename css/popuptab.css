@@ -508,7 +508,8 @@
     z-index: 15000;
 }
 .image.media{
-    width: 640px;
+    /*width: 640px;*/
+    height: 480px;
 }
 .float.panel.media-viewer{
     border: none;

@@ -1,4 +1,4 @@
-var dhadingdata = {
+{
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
                                                                                 
@@ -11,84 +11,4 @@ var dhadingdata = {
 { "type": "Feature", "properties": { "ele": 1560.283636, "time": "2015\/05\/30 02:56:11", "magvar": null, "geoidheight": null, "name": "Photo", "cmt": null, "desc": null, "src": null, "link1_href": "2015-05-30_08-41-11.jpg", "link1_text": "2015-05-30_08-41-11.jpg", "link1_type": null, "link2_href": null, "link2_text": null, "link2_type": null, "sym": null, "type": null, "fix": null, "sat": 0, "hdop": null, "vdop": null, "pdop": null, "ageofdgpsdata": null, "dgpsid": null }, "geometry": { "type": "Point", "coordinates": [ 84.911440043073313, 28.077841869712728 ] } },
 { "type": "Feature", "properties": { "ele": 1561.125857, "time": "2015\/05\/30 02:56:25", "magvar": null, "geoidheight": null, "name": "Photo", "cmt": null, "desc": null, "src": null, "link1_href": "2015-05-30_08-41-25.jpg", "link1_text": "2015-05-30_08-41-25.jpg", "link1_type": null, "link2_href": null, "link2_text": null, "link2_type": null, "sym": null, "type": null, "fix": null, "sat": 0, "hdop": null, "vdop": null, "pdop": null, "ageofdgpsdata": null, "dgpsid": null }, "geometry": { "type": "Point", "coordinates": [ 84.911389408099154, 28.077843657189479 ] } }
 ]
-};
-
-
-
-
-$(document).ready(function() {
-    $(".numberCircle").hide();
-
-    var nepalBorderLatLngArray = [];
-
-    
-
-    var cartograph = new Map({
-        "basemaps": {
-            "OpenStreetMap": {
-                "tileLayer": L.TileLayer.boundaryCanvas("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                    boundary: nepalBorderLatLngArray,
-                    doubleClickZoom: false
-                })
-            },
-            "Satellite Imagery": {
-                "tileLayer": new L.Google()
-            }
-        }
-    });
-    $("#map").find("a.leaflet-control-zoom-out").text("–");
-    var map = cartograph.getMap();
-
-$(map._container).find(".leaflet-map-pane").dblclick(function(){
-map.setZoom(map.getZoom()+1);
-});
-
-var geojson = L.geoJson(dhadingdata, {
-    onEachFeature: function(feature, layer){
-        console.log(feature);
-        var marker = L.marker(feature.geometry.coordinates.reverse(),{
-            icon: L.icon({
-                iconUrl: "img/markers/operational/medium.svg"
-            })
-        })
-        marker.on("click", function(e){
-            new SplashScreen(MediaDocument("pictures/"+feature.properties["link1_href"])).appendTo("body");
-        });
-        marker.addTo(map);
-    }
-});
-
-var districtsBasemap = L.tileLayer("http://raw.githubusercontent.com/jedi-Knight/Maps-of-Nepal/v2/nepal-districts-vdcs/{z}/{x}/{y}.png", {});
-map.addLayer(districtsBasemap);
-$(districtsBasemap._container).addClass("overlay-tiles districts").css("z-index", 2);
-
-var osmBasemap = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {});
-map.addLayer(osmBasemap);
-$(osmBasemap._container).addClass("overlay-tiles districts").css("z-index", 1);
-
-
-
-
-
-
-   
-
-    /*$("#slider").on("mouseleave", function(){
-        if(!mouseoverTriggered) return;
-        intervalID = setInterval(function(){
-            if(sliderfocusout){
-            $("#slider").addClass("inactive");
-            mouseoverTriggered = 0;
-            }
-            clearInterval(intervalID);
-        }, 10000);
-    });*/
-
-
-});
-
-$.fn.attrByFunction = function(fn) {
-    return $(this).each(function() {
-        $(this).attr(fn.call(this));
-    });
-};
+}

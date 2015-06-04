@@ -1930,7 +1930,7 @@ function UI_MarkerGroups(pointsGroupsArray, map) {
             });*/
 
 marker.on("click", function(e){
-new SplashScreen(MediaDocument("img/pic.jpg")).appendTo("body");
+new SplashScreen(MediaDocument("pictures/"+feature.properties.getAttributes()["link1_href"])).appendTo("body");
 });
 
             var highLightCircle;
