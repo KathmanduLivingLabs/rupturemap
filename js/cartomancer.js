@@ -63,8 +63,23 @@ map.addLayer(districtsBasemap);
 $(districtsBasemap._container).addClass("overlay-tiles districts").css("z-index", 2);
 
 var osmBasemap = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {});
-map.addLayer(osmBasemap);
-$(osmBasemap._container).addClass("overlay-tiles districts").css("z-index", 1);
+//map.addLayer(osmBasemap);
+//$(osmBasemap._container).addClass("overlay-tiles districts").css("z-index", 1);
+
+var basemaps = {
+"OpenStreetMap": osmBasemap,
+"Satellite Imagery": new L.Google()
+};
+
+
+L.control.layers(basemaps,{},{
+    position: "bottomleft",
+    collapsed: false
+}).addTo(map);
+
+osmBasemap.addTo(map);
+
+L.control.scale().addTo(map);
 
 
 
