@@ -1704,6 +1704,10 @@ input[type=checkbox]{
 pointer-events: all;
 }
 
+.leaflet-control-zoom{
+    margin-top: 60px;
+}
+
 @media (max-width: 1050px){
     .leaflet-control-layers-expanded{
         padding-bottom: 0px;

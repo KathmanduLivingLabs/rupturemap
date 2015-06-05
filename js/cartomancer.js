@@ -268,7 +268,7 @@ osmBasemap.addTo(map);
 L.control.scale().addTo(map);
 
 L.control.zoom({
-    position: "bottomleft"
+    position: "topleft"
 }).addTo(map);
 
 
