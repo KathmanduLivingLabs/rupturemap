@@ -229,7 +229,9 @@ mapGlobals = {
     map: map
 };
 
-L.control.zoom().addTo(map);
+L.control.zoom({
+    position: "bottomleft"
+}).addTo(map);
 
 var geojson = L.geoJson(dhadingdata, {
     onEachFeature: function(feature, layer){
