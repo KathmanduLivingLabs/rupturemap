@@ -255,7 +255,7 @@ var osmBasemap = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 var basemaps = {
 "OpenStreetMap": osmBasemap,
 "Satellite Imagery": new L.Google(),
-"Hill-shading": L.tileLayer("//https://{s}.tiles.mapbox.com/v4/kll.m4l44c1a/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA"), L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.mcabm3ch/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA", {});//https://{s}.tiles.mapbox.com/v4/kll.m4l44c1a/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA"), L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.8fb56087/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA
+"Hill-shading": L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.mcabm3ch/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA", {})//https://{s}.tiles.mapbox.com/v4/kll.m4l44c1a/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA"), L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.8fb56087/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA
 };
 
 
