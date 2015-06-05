@@ -225,6 +225,12 @@ $(map._container).find(".leaflet-map-pane").dblclick(function(){
 map.setZoom(map.getZoom()+1);
 });
 
+mapGlobals = {
+    map: map
+};
+
+L.control.zoom().addTo(map);
+
 var geojson = L.geoJson(dhadingdata, {
     onEachFeature: function(feature, layer){
         console.log(feature);
