@@ -229,10 +229,6 @@ mapGlobals = {
     map: map
 };
 
-L.control.zoom({
-    position: "bottomleft"
-}).addTo(map);
-
 var geojson = L.geoJson(dhadingdata, {
     onEachFeature: function(feature, layer){
         console.log(feature);
@@ -270,6 +266,10 @@ L.control.layers(basemaps,{},{
 osmBasemap.addTo(map);
 
 L.control.scale().addTo(map);
+
+L.control.zoom({
+    position: "bottomleft"
+}).addTo(map);
 
 
 
