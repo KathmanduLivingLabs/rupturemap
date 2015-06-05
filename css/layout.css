@@ -1704,7 +1704,7 @@ input[type=checkbox]{
 pointer-events: all;
 }
 
-.leaflet-control-zoom{
+.leaflet-left .leaflet-control{
     margin-top: 60px;
 }
 
