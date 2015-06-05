@@ -230,7 +230,7 @@ var geojson = L.geoJson(dhadingdata, {
         console.log(feature);
         var marker = L.marker(feature.geometry.coordinates.reverse(),{
             icon: L.icon({
-                iconUrl: "img/markers/operational/medium.svg"
+                iconUrl: "img/markers/survey-approved/medium.svg"
             })
         })
         marker.on("click", function(e){
