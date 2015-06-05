@@ -508,8 +508,9 @@
     z-index: 15000;
 }
 .image.media{
-    /*width: 640px;*/
-    height: 480px;
+    min-width: 640px;
+    max-width:800px;
+    min-height: 480px;
 }
 .float.panel.media-viewer{
     border: none;
