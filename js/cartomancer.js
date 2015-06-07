@@ -246,7 +246,7 @@ var geojson = L.geoJson(dhadingdata, {
 
 var districtsBasemap = L.tileLayer("http://raw.githubusercontent.com/jedi-Knight/Maps-of-Nepal/v2/nepal-districts-vdcs/{z}/{x}/{y}.png", {});
 map.addLayer(districtsBasemap);
-$(districtsBasemap._container).addClass("overlay-tiles districts").css("z-index", 2);
+$(districtsBasemap._container).addClass("overlay-tiles districts").css("z-index", 20);
 
 var osmBasemap = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {});
 //map.addLayer(osmBasemap);
